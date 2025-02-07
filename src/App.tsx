@@ -21,7 +21,7 @@ const getModelImage = (make: string, model: string): string => {
     // BMW Models
     'bmw m3': 'https://media.ed.edmunds-media.com/bmw/m3/2024/oem/2024_bmw_m3_sedan_competition_fq_oem_1_1600.jpg',
     'bmw m4': 'https://hips.hearstapps.com/hmg-prod/images/2024-bmw-m4-competition-coupe-101-1665505029.jpg',
-    'bmw m5': 'https://www.motortrend.com/uploads/2024/01/2025-BMW-M5-exterior-8.jpg',
+    'bmw m5': 'https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20210701043906_BMW_M5_Competition.jpg&w=700&c=1',
     'bmw x5': 'https://www.bmwusa.com/content/dam/bmw/common/all-vehicles/x-series/x5/2024/gallery/BMW-MY24-X5-Gallery-01.jpg',
     'bmw 3 series': 'https://www.motortrend.com/uploads/2023/07/2024-BMW-330i-M-Sport-24.jpg',
     'bmw 5 series': 'https://www.bmwusa.com/content/dam/bmw/common/all-vehicles/5-series/sedan/2024/gallery/BMW-MY24-5-Series-Gallery-Exterior-06.jpg',
