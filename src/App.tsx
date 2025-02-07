@@ -19,65 +19,70 @@ const getModelImage = (make: string, model: string): string => {
   
   const MODEL_IMAGES: { [key: string]: string } = {
     // BMW Models
-    'bmw m3': 'https://media.ed.edmunds-media.com/bmw/m3/2024/oem/2024_bmw_m3_sedan_competition_fq_oem_1_1600.jpg',
-    'bmw m4': 'https://hips.hearstapps.com/hmg-prod/images/2024-bmw-m4-competition-coupe-101-1665505029.jpg',
-    'bmw m5': 'https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20210701043906_BMW_M5_Competition.jpg&w=700&c=1',
-    'bmw x5': 'https://www.bmwusa.com/content/dam/bmw/common/all-vehicles/x-series/x5/2024/gallery/BMW-MY24-X5-Gallery-01.jpg',
-    'bmw 3 series': 'https://www.motortrend.com/uploads/2023/07/2024-BMW-330i-M-Sport-24.jpg',
-    'bmw 5 series': 'https://www.bmwusa.com/content/dam/bmw/common/all-vehicles/5-series/sedan/2024/gallery/BMW-MY24-5-Series-Gallery-Exterior-06.jpg',
+    'bmw z4': 'https://platform.cstatic-images.com/in/v2/stock_photos/1313c516-f8ed-4f63-a0d5-02872464db8c/cbeb1c65-a0e0-46e5-ad17-51ef940cf1c1.png',
+    'bmw 430i coupe': 'https://mediapool.bmwgroup.com/cache/P9/202005/P90390041/P90390041-bmw-430i-coup-mineral-white-metallic-rim-19-y-spoke-06-2020-600px.jpg',
+    'bmw m850i xdrive coupe': 'https://www.motortrend.com/uploads/sites/5/2019/03/2019-BMW-M850i-xDrive-front-three-quarter-in-motion-2.jpg',
+    'bmw m8 competition coupe': 'https://www.infinity-group.in/wp-content/uploads/2024/04/BMW-M8-Coupe-Exterior-view.jpg',
+    'bmw 750i xdrive': 'https://www.topgear.com/sites/default/files/images/cars-road-test/2019/08/4d2352886115db6b2662e488e9aebb1a/p90348944_highres.jpg',
+    'bmw 230i coupe': 'https://editorial.pxcrush.net/carsales/general/editorial/221101_bmw_230i_01.jpg?width=1024&height=682',
     
     // Audi Models
-    'audi rs6': 'https://media.ed.edmunds-media.com/audi/rs-6/2024/oem/2024_audi_rs-6_wagon_avant-performance_fq_oem_1_1600.jpg',
-    'audi rs7': 'https://media.ed.edmunds-media.com/audi/rs-7/2024/oem/2024_audi_rs-7_sedan_performance_fq_oem_1_1600.jpg',
-    'audi q8': 'https://media.ed.edmunds-media.com/audi/q8/2024/oem/2024_audi_q8_4dr-suv_prestige_fq_oem_1_1600.jpg',
-    'audi e-tron gt': 'https://media.ed.edmunds-media.com/audi/e-tron-gt/2024/oem/2024_audi_e-tron-gt_sedan_rs_fq_oem_1_1600.jpg',
+    'audi rs 3': 'https://www.topgear.com/sites/default/files/2024/10/Audi_RS_3_Sportback_kyalamigreen_5419.jpg',
+    'audi a3': 'https://media.ed.edmunds-media.com/audi/rs-7/2024/oem/2024_audi_rs-7_sedan_performance_fq_oem_1_1600.jpg',
+    'audi r8 coupe': 'https://media.ed.edmunds-media.com/audi/q8/2024/oem/2024_audi_q8_4dr-suv_prestige_fq_oem_1_1600.jpg',
+    'audi s7': 'https://hips.hearstapps.com/hmg-prod/images/2022-audi-s7-mmp-1-1623860448.jpg?crop=0.952xw:0.803xh;0.0240xw,0.135xh&resize=2048:*',
+    'audi r8 awd': 'https://www.edmunds.com/assets/m/audi/r8/2020/oem/2020_audi_r8_coupe_performance_fq_oem_1_600.jpg',
     
     // Mercedes Models
-    'mercedes amg gt': 'https://media.ed.edmunds-media.com/mercedes-benz/amg-gt/2024/oem/2024_mercedes-benz_amg-gt_coupe_53_fq_oem_1_1600.jpg',
-    'mercedes c-class': 'https://media.ed.edmunds-media.com/mercedes-benz/c-class/2024/oem/2024_mercedes-benz_c-class_sedan_amg-c-43_fq_oem_1_1600.jpg',
-    'mercedes s-class': 'https://media.ed.edmunds-media.com/mercedes-benz/s-class/2024/oem/2024_mercedes-benz_s-class_sedan_s-500_fq_oem_1_1600.jpg',
-    'mercedes eqs': 'https://media.ed.edmunds-media.com/mercedes-benz/eqs/2024/oem/2024_mercedes-benz_eqs_sedan_450-plus_fq_oem_1_1600.jpg',
+    'mercedes-benz gle350': 'https://www.mercedes-benz.co.in/content/dam/hq/passengercars/cars/gle/gle-suv-v167-fl-pi/modeloverview/01-2023/images/mercedes-benz-gle-suv-v167-modeloverview-696x392-01-2023.png',
+    'mercedes-benz glb250 4matic': 'https://www.mbusa.com/content/dam/mb-nafta/us/myco/my25/glb-class/byo-options/2025-GLB-SUV-MP-006.jpg',
+    'mercedes-benz a220 4matic': 'https://www.arrowheadmb.com/blog/wp-content/uploads/sites/177/2022/12/2022-Mercedes-Benz-A-220-B_o.jpg',
+    'mercedes-benz amg gle53 4matic plus': 'https://stimg.cardekho.com/images/carexteriorimages/930x620/Mercedes-Benz/AMG-GLE-53/10874/1690455453333/front-left-side-47.jpg',
     
     // Porsche Models
-    'porsche 911': 'https://media.ed.edmunds-media.com/porsche/911/2024/oem/2024_porsche_911_coupe_carrera-t_fq_oem_1_1600.jpg',
+    'porsche 911 carrera t': 'https://media.ed.edmunds-media.com/porsche/911/2024/oem/2024_porsche_911_coupe_carrera-t_fq_oem_1_1600.jpg',
     'porsche cayenne': 'https://media.ed.edmunds-media.com/porsche/cayenne/2024/oem/2024_porsche_cayenne_4dr-suv_base_fq_oem_1_1600.jpg',
-    'porsche panamera': 'https://media.ed.edmunds-media.com/porsche/panamera/2024/oem/2024_porsche_panamera_sedan_4-executive_fq_oem_1_1600.jpg',
-    'porsche taycan': 'https://media.ed.edmunds-media.com/porsche/taycan/2024/oem/2024_porsche_taycan_sedan_turbo-s_fq_oem_1_1600.jpg',
+    'porsche 911 turbo': 'https://www.topgear.com/sites/default/files/cars-car/image/2024/02/pcgb20_0589_fine.jpg',
+    'porsche 718 boxster': 'https://pictures.porsche.com/rtt/iris?COSY-EU-100-1711coMvsi60AAt5FwcmBEgA4qP8iBUDxPE3Cb9pNXABuN9dMGF4tl3U0%25z8rMHIspbWvanYb%255y%25oq%25vSTmjMXD4qAZeoNBPUSfUx4RmHlCgI7Zl2dioCtRvQDcFGD6AYnfurnfeV6iTrF5zhRc21Gf8dXFikXPE3pUWFYRpwY4EhMyKx7Jv5mb3%25ZpjsLV',
+    'porsche cayenne turbo': 'https://www.autoblog.com/.image/t_share/MjA5MDg5NjA3NjgzMjIxMTA0/2024-porsche-cayenne-turbo-e-hybrid.jpg',
     
     // Ferrari Models
-    'ferrari f8': 'https://cdn.motor1.com/images/mgl/kJm1l/s1/ferrari-f8-tributo.jpg',
-    'ferrari sf90': 'https://cdn.motor1.com/images/mgl/JOxvRg/s1/ferrari-sf90-xx-stradale.jpg',
-    'ferrari roma': 'https://cdn.motor1.com/images/mgl/qkqvR/s1/ferrari-roma.jpg',
-    'ferrari 296': 'https://cdn.motor1.com/images/mgl/P33J0A/s1/ferrari-296-gtb.jpg',
+    'ferrari 812 competizione': 'https://exclusivecarregistry.com/images/cars/preview/thumb_59976.jpg',
+    'ferrari f8 tributo': 'https://www.carscoops.com/wp-content/uploads/2021/01/Novitec-Ferrari-F8-Tributo.jpg',
+    'ferrari f8 spider': 'https://res.cloudinary.com/unix-center/image/upload/c_limit,dpr_3.0,f_auto,fl_progressive,g_center,h_580,q_75,w_906/fuyj37qng1l6rwtrfw9x.jpg',
+    'ferrari 812 superfast': 'https://issimi-vehicles-cdn.b-cdn.net/publicamlvehiclemanagement/VehicleDetails/668/timestamped-1730178483559-1-2019-Ferrari-812-245747.jpg?width=3840&quality=75',
+    'ferrari 488 pista': 'https://img.autocarpro.in/autocarpro/IMG/594/65594/ferrari-488-pista-6.jpg',
     
     // Lamborghini Models
-    'lamborghini huracan': 'https://media.ed.edmunds-media.com/lamborghini/huracan/2024/oem/2024_lamborghini_huracan_coupe_sterrato_fq_oem_1_1600.jpg',
-    'lamborghini urus': 'https://media.ed.edmunds-media.com/lamborghini/urus/2024/oem/2024_lamborghini_urus_4dr-suv_performante_fq_oem_1_1600.jpg',
-    'lamborghini revuelto': 'https://cdn.motor1.com/images/mgl/P3Y0Ry/s1/lamborghini-revuelto.jpg',
+    'lamborghini huracan spyder': 'https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20191004033048_Huracan_Evo-Spyder-fronty.jpg',
+    'lamborghini huracan coupe': 'https://imgcdn.zigwheels.ph/large/gallery/exterior/51/478/lamborghini-huracan-front-angle-low-view-663613.jpg',
+    'lamborghini huracan': 'https://gtaexotics.ca/wp-content/uploads/2021/09/performante_2-876x535.jpg',
     
     // Toyota Models
-    'toyota supra': 'https://media.ed.edmunds-media.com/toyota/gr-supra/2024/oem/2024_toyota_gr-supra_coupe_30-premium_fq_oem_1_1600.jpg',
-    'toyota camry': 'https://media.ed.edmunds-media.com/toyota/camry/2024/oem/2024_toyota_camry_sedan_xse_fq_oem_1_1600.jpg',
-    'toyota gr86': 'https://media.ed.edmunds-media.com/toyota/gr86/2024/oem/2024_toyota_gr86_coupe_premium_fq_oem_1_1600.jpg',
-    'toyota crown': 'https://media.ed.edmunds-media.com/toyota/crown/2024/oem/2024_toyota_crown_sedan_platinum_fq_oem_1_1600.jpg',
+    'toyota gr supra': 'https://media.ed.edmunds-media.com/toyota/gr-supra/2024/oem/2024_toyota_gr-supra_coupe_30-premium_fq_oem_1_1600.jpg',
+    'toyota gr 86': 'https://www.topgear.com/sites/default/files/2022/10/DSC03037.jpg',
+    'toyota corolla': 'https://financialexpresswpcontent.s3.amazonaws.com/uploads/2018/04/toyota-corolla-plugin-hybrid-ev-2018-auto-china-main-image.jpg',
     
     // Honda Models
-    'honda civic': 'https://media.ed.edmunds-media.com/honda/civic/2024/oem/2024_honda_civic_sedan_sport_fq_oem_1_1600.jpg',
-    'honda accord': 'https://media.ed.edmunds-media.com/honda/accord/2024/oem/2024_honda_accord_sedan_touring_fq_oem_1_1600.jpg',
-    'honda cr-v': 'https://media.ed.edmunds-media.com/honda/cr-v/2024/oem/2024_honda_cr-v_4dr-suv_sport-touring_fq_oem_1_1600.jpg',
-    'honda pilot': 'https://media.ed.edmunds-media.com/honda/pilot/2024/oem/2024_honda_pilot_4dr-suv_elite_fq_oem_1_1600.jpg',
+    'honda insight touring': 'https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20191108064231_Honda-Insight.jpg&w=700&c=1',
+    'honda odyssey': 'https://www.honda.ca/-/media/Brands/Honda/Models/ODYSSEY/2025/Overview/08-Gallery/Exterior/MY25_Odyssey_1248x702_Desktop_OverviewGalleryExterior_10.png?h=702&iar=0&w=1248&rev=26882e91303a4fd08ebe924bbcf7b76e&hash=724C4681185031E1E868ABECC9FB7594',
+    'honda hr-v awd': 'https://media.ed.edmunds-media.com/honda/hr-v/2025/oem/2025_honda_hr-v_4dr-suv_ex-l_fq_oem_1_1280.jpg',
+    'honda pilot fwd': 'https://vehicle-images.dealerinspire.com/dbd5-110008034/5FNYG2H48SB020454/61b63dc67735a2be4a88717cd87530f6.jpg',
+    'honda insight': 'https://di-honda-enrollment.s3.amazonaws.com/2021/model-pages/insight/insight_2021_template/trims/Honda+Insight+Touring.jpg',
     
     // Ford Models
-    'ford mustang': 'https://media.ed.edmunds-media.com/ford/mustang/2024/oem/2024_ford_mustang_coupe_gt_fq_oem_1_1600.jpg',
-    'ford f-150': 'https://media.ed.edmunds-media.com/ford/f-150/2024/oem/2024_ford_f-150_crew-cab-pickup_raptor_fq_oem_1_1600.jpg',
-    'ford bronco': 'https://media.ed.edmunds-media.com/ford/bronco/2024/oem/2024_ford_bronco_2dr-suv_wildtrak_fq_oem_1_1600.jpg',
-    'ford explorer': 'https://media.ed.edmunds-media.com/ford/explorer/2024/oem/2024_ford_explorer_4dr-suv_st_fq_oem_1_1600.jpg',
+    'ford mustang performance package': 'https://www.topgear.com/sites/default/files/images/cars-road-test/carousel/2018/05/44061cd9fc15160f7fe87cbfc343a51b/_v9i0001d.jpg',
+    'ford f150 pickup 2wd': 'https://vehicle-images.dealerinspire.com/691d-110008765/1FTEW3K54RKD46357/5fcc034cfe878ac89d2973459466a137.jpg',
+    'ford transit connect van fwd': 'https://media.ed.edmunds-media.com/ford/transit-connect/2019/oem/2019_ford_transit-connect_cargo-minivan_cargo-van-xlt-wrear-180-degree-doors-lwb_fq_oem_1_1600.jpg',
+    'ford ecosport fwd': 'https://d2qldpouxvc097.cloudfront.net/image-by-path?bucket=a5-gallery-serverless-prod-chromebucket-1iz9ffi08lwxm&key=413733%2Ffront34%2Flg%2Fb27834',
+    'ford transit connect van 2wd': 'https://hips.hearstapps.com/hmg-prod/images/2018-ford-transit-connect-1649918537.jpg?crop=0.573xw:0.489xh;0.293xw,0.362xh&resize=1200:*',
     
     // Chevrolet Models
     'chevrolet corvette': 'https://media.ed.edmunds-media.com/chevrolet/corvette/2024/oem/2024_chevrolet_corvette_coupe_z06_fq_oem_1_1600.jpg',
-    'chevrolet camaro': 'https://media.ed.edmunds-media.com/chevrolet/camaro/2024/oem/2024_chevrolet_camaro_coupe_zl1_fq_oem_1_1600.jpg',
-    'chevrolet blazer': 'https://media.ed.edmunds-media.com/chevrolet/blazer/2024/oem/2024_chevrolet_blazer_4dr-suv_rs_fq_oem_1_1600.jpg',
-    'chevrolet tahoe': 'https://media.ed.edmunds-media.com/chevrolet/tahoe/2024/oem/2024_chevrolet_tahoe_4dr-suv_high-country_fq_oem_1_1600.jpg'
+    'chevrolet trax': 'https://dealerinspire-image-library-prod.s3.us-east-1.amazonaws.com/images/fUGead6lrWb56V7jXkuTiYnQ7cap4lPxP1Tzgu7V.jpg',
+    'chevrolet trax fwd': 'https://autoimage.capitalone.com/cms/Auto/assets/images/2656-hero-2024-chevrolet-trax-front-quarter.jpg',
+    'chevrolet trailblazer awd': 'https://media.ed.edmunds-media.com/chevrolet/trailblazer/2025/oem/2025_chevrolet_trailblazer_4dr-suv_activ_fq_oem_1_1600.jpg',
+    'chevrolet malibu': 'https://hips.hearstapps.com/hmg-prod/images/2019-chevrolet-malibu-rs-114-1568289287.jpg?crop=0.808xw:0.807xh;0.0871xw,0.0871xh&resize=980:*'
   };
 
   // Try to find an exact match for the model
